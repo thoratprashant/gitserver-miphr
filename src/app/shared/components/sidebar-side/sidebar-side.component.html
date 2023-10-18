@@ -1,0 +1,57 @@
+<div class="sidebar-panel">
+    <div id="scroll-area" [perfectScrollbar] class="navigation-hold flex flex-col">
+        <div class="sidebar-hold">
+
+            <!-- App Logo -->
+            <div class="branding">
+                <img src="assets/images/logo.svg" alt="" class="app-logo">  
+            </div>
+            <!-- Sidebar user -->
+            <div class="app-user">
+                <div class="app-user-photo">
+                    <img src="assets/images/avatars/003-man-1.svg" class="mat-elevation-z1" alt="">
+                </div>
+                <span class="app-user-name">
+                    <!-- {{jwtAuth?.user?.displayName}} -->
+                    Admin's Name
+                </span>
+                <!-- Small buttons -->
+                <!-- <div class="app-user-controls">
+                    <a class="text-muted" mat-icon-button mat-xs-button [matMenuTriggerFor]="appUserMenu">
+                        <mat-icon class="text-[18px] !flex justify-center items-center">settings</mat-icon>
+                    </a>
+                    <a class="text-muted" mat-icon-button mat-xs-button matTooltip="Inbox" routerLink="/inbox">
+                        <mat-icon class="text-[18px] !flex justify-center items-center">email</mat-icon>
+                    </a>
+                    <a class="text-muted" mat-icon-button mat-xs-button matTooltip="Sign Out"
+                        routerLink="/sessions/signin">
+                        <mat-icon class="text-[18px] !flex justify-center items-center">exit_to_app</mat-icon>
+                    </a>
+                    <mat-menu #appUserMenu="matMenu">
+                        <button mat-menu-item routerLink="/admin/my-profile">
+                            <mat-icon>account_box</mat-icon>
+                            <span>Profile</span>
+                        </button>
+                        <button mat-menu-item routerLink="/profile/settings">
+                            <mat-icon>settings</mat-icon>
+                            <span>Account Settings</span>
+                        </button>
+                        <button mat-menu-item (click)="jwtAuth.signout()">
+                            <mat-icon>exit_to_app</mat-icon>
+                            <span>Sign out</span>
+                        </button>
+                    </mat-menu>
+                </div> -->
+            </div>
+            <!-- Navigation -->
+            <div class="mt-4 mb-4">
+                <app-sidenav [items]="menuItems" [hasIconMenu]="hasIconTypeMenuItem"
+                    [iconMenuTitle]="iconTypeMenuTitle"></app-sidenav>
+            </div>
+        </div>
+
+        <div class="mt-auto mb-4 flex justify-center">
+            <button mat-raised-button [routerLink]="['/auth/signin']">Logout</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+/* You can add global styles to this file, and also import other style files */
+.fnt--14{font-size: 14px !important;}
+.fnt--15{font-size: 15px !important;}
+.fnt--16{font-size: 16px !important;}
+.fnt--18{font-size: 18px !important;}
+.fnt--20{font-size: 20px !important;}
+.fnt--22{font-size: 20px !important;}
+.fnt--24{font-size: 24px !important;}
+
+.fw-bold{font-weight: bold;}
+.text-center{text-align: center !important;}
+// color
+.clr--1fa4dd{ color: #1fa4dd !important;}
+.clr--98a0ab{ color: #98a0ab !important;}
+.clr--757575{ color: #757575 !important;} 
+.clr--333{ color: #333 !important;} 
+.clr--304156{ color: #304156 !important;word-break: break-word;}
+.clr--999{ color: #999 !important;}
+.clr--fff{color: #fff !important;}
+.clr-7063bf {color: #7063bf !important;}
+.clr-f54{
+    color: #f54337 !important;
+}
+.clr-00b{
+    color: #00b131 !important;
+}
+.clr--d2d4d4{
+    color: #d2d4d4 !important;
+}
+.clr--511d29 {
+    color: #511D29 !important;
+}
+.clr--960019 {
+    color: #960019 !important;
+}
+.clr--959595 {
+    color: #959595 !important;
+}
+    .egret-navy .mat-mdc-form-field {
+        .mdc-notched-outline__notch {
+            border-left: 1px solid transparent !important;
+            border-right: 1px solid transparent !important;
+        }
+    }
+    .mat-mdc-form-field-subscript-wrapper{
+        display: none;
+    }
+    .egret-navy .mat-mdc-raised-button.mat-primary {
+        color: #fff !important;
+        background-color: #511D29 !important;
+        height: 50px;
+        &:hover{
+            background-color: #960019 !important;
+        }
+    }

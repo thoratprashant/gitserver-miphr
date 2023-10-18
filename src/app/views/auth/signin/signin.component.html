@@ -1,0 +1,65 @@
+<div class="page-wrap h-full slate">
+    <div class="session-form-hold">
+      <!-- <mat-progress-bar mode="determinate" class="session-progress"></mat-progress-bar> -->
+      <mat-card class="!m-0">
+        <mat-card-content>
+          <div class="flex flex-col items-center !py-4">
+            <img width="100px" src="assets/images/logo.svg" alt="">
+            <h2 class="fnt--24 clr--333 m-0 py-4">Sign in to your account</h2>
+          </div> 
+          <mat-error *ngIf="errorMsg" class="text-center"><small class="text-red">{{errorMsg}}</small></mat-error>
+          
+          <form [formGroup]="signinForm" (ngSubmit)="signin()"> 
+            <div class="mb-7">
+              <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Username</mat-label>
+                <input
+                  matInput
+                  name="username"
+                  [formControl]="signinForm.controls['username']"
+                  placeholder="Username"
+                  value="">
+              </mat-form-field>
+              <mat-error 
+                *ngIf="signinForm.controls['username'].hasError('required') && signinForm.controls['username'].touched" 
+                class="form-error-msg"> Username is required </mat-error>
+            </div>
+  
+            <div class="mb-4">
+              <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Password</mat-label>
+                <input 
+                  id="password"
+                  type="password"
+                  name="password"
+                  matInput
+                  [formControl]="signinForm.controls['password']"
+                  placeholder="Password" 
+                  value="" #passwordField>
+                  <button mat-icon-button type="button"
+                    (click)="passwordField.type === 'password' ? passwordField.type = 'text' : passwordField.type = 'password'" matSuffix
+                    [disabled]="signinForm.disabled">
+                    <mat-icon class="icon-size-5" *ngIf="passwordField.type === 'password'">visibility_off</mat-icon>
+                    <mat-icon class="icon-size-5" *ngIf="passwordField.type === 'text'">visibility_on</mat-icon>
+                  </button>
+              </mat-form-field>
+              <mat-error 
+                *ngIf="signinForm.controls['password'].hasError('required') && signinForm.controls['password'].touched" 
+                class="form-error-msg"> Password is required </mat-error>
+            </div>
+            
+            <div class="flex mb-4">
+              <a href="" class="fnt--16 clr--959595 hover:underline text-right full-width" [routerLink]="['/auth/forgot-password']"> Forgot Password</a>
+            </div>
+            
+            <button mat-raised-button class="mat-primary full-width mb-7" [disabled]="signinForm.invalid">Sign in</button>
+            <!-- <div class="text-center flex">
+              <a [routerLink]="'/sessions/forgot-password'" class="mat-primary text-center full-width">Forgot password</a> 
+            </div> -->
+          </form>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  
+  

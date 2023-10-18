@@ -1,0 +1,96 @@
+<div class="px-4">
+    <div class="my-profile-wrapper">
+        <h2 class="fnt--24 clr--333 mb-0 py-4">
+            My Profile
+        </h2>
+
+        <div class="flex flex-wrap update-email-password-wrapper justify-between">
+            <div class="update-email-section">
+                <p class="mb-0 fnt--20 clr--333 pb-4">Update Email</p>
+                <form >
+                    <div class="mb-7 mt-4">
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Current Email</mat-label>
+                            <input matInput name="username"  placeholder="Current Email" value="">
+                        </mat-form-field>
+                    </div>
+                    <div class="mb-7">
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>New Email</mat-label>
+                            <input matInput name="username"  placeholder="New Email" value="">
+                        </mat-form-field>
+                    </div>
+                    <div class="flex flex-row justify-between items-center mb-7">
+                        <button mat-raised-button class="mat-primary full-width send-code-btn">Send Code</button>
+                        <div class="flex">
+                            <a href="" class="fnt--16 clr--959595 hover:underline text-right full-width"
+                                [routerLink]="['/auth/forgot-password']"> Resend in 30 secs</a>
+                        </div>
+                    </div>
+                    <div class="mb-7">
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Verification Code</mat-label>
+                            <input matInput name="username"  placeholder="Verification Code" value="">
+                        </mat-form-field>
+                    </div>
+                    <div class="flex justify-center mb-7">
+                        <button mat-raised-button class="mat-primary full-width send-code-btn">Update Email</button>
+                    </div>
+                </form>
+            </div>
+            <div class="update-password-section">
+                <p class="mb-0 fnt--20 clr--333 pb-4">Update Password</p>
+                <form >
+                    <div class="mb-7 mt-4">
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Current password</mat-label>
+                            <input id="password" type="password" name="password" matInput
+                                 placeholder="Current password" value="" #passwordField>
+                            <button mat-icon-button type="button"
+                                (click)="passwordField.type === 'password' ? passwordField.type = 'text' : passwordField.type = 'password'"
+                                matSuffix [disabled]="signinForm.disabled">
+                                <mat-icon class="icon-size-5" *ngIf="passwordField.type === 'password'">visibility_off</mat-icon>
+                                <mat-icon class="icon-size-5" *ngIf="passwordField.type === 'text'">visibility_on</mat-icon>
+                            </button>
+                        </mat-form-field>
+                    </div>
+                
+                    <div class="mb-7">
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>New Password</mat-label>
+                            <input id="password" type="password" name="password" matInput
+                                 placeholder="New Password" value=""
+                                #newPasswordField>
+                            <button mat-icon-button type="button"
+                                (click)="newPasswordField.type === 'password' ? newPasswordField.type = 'text' : newPasswordField.type = 'password'"
+                                matSuffix [disabled]="signinForm.disabled">
+                                <mat-icon class="icon-size-5" *ngIf="newPasswordField.type === 'password'">visibility_off</mat-icon>
+                                <mat-icon class="icon-size-5" *ngIf="newPasswordField.type === 'text'">visibility_on</mat-icon>
+                            </button>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="mb-7">
+                        <mat-form-field class="full-width" appearance="outline">
+                            <mat-label>Confirm New Password</mat-label>
+                            <input id="password" type="password" name="password" matInput 
+                                placeholder="New Password" value="" #confirmPasswordField>
+                            <button mat-icon-button type="button"
+                                (click)="confirmPasswordField.type === 'password' ? confirmPasswordField.type = 'text' : confirmPasswordField.type = 'password'"
+                                matSuffix [disabled]="signinForm.disabled">
+                                <mat-icon class="icon-size-5" *ngIf="confirmPasswordField.type === 'password'">visibility_off</mat-icon>
+                                <mat-icon class="icon-size-5" *ngIf="confirmPasswordField.type === 'text'">visibility_on</mat-icon>
+                            </button>
+                        </mat-form-field>
+                    </div>
+                
+                    <div class="flex justify-center mb-7">
+                        <button mat-raised-button class="mat-primary full-width send-code-btn">Update Password</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</div>

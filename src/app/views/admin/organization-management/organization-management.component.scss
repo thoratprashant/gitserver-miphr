@@ -1,0 +1,25 @@
+.organization-management-wrapper{
+    .organization-management-section{
+        padding: 15px 15px;
+        .organization-management-header-section{
+            align-items: flex-end;
+            margin-bottom: 20px;
+
+            .search-field{
+                max-width: 350px;
+            }
+        }
+        .organization-management-body-section{
+            padding: 15px 0;
+            .org-table-section{
+                overflow: auto;
+                table{
+                    min-width: 930px;
+                }
+                .mat-mdc-paginator{
+                    min-width: 930px;
+                }
+            }
+        }
+    }
+}
